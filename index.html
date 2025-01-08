@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Projects</h1>
+        <table id="projects-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Languages Used</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Define an array of objects to store the project data
+const projects = [
+    {
+        name: "dropdown",
+        date: "01/08/2025",
+        languages: "HTML, CSS, JavaScript"
+    },
+    {
+        name: "image-Corousel",
+        date: "12/15/2024",
+        languages: "Python, Django"
+    },
+    {
+        name: "Project 3",
+        date: "06/22/2023",
+        languages: "Java, Spring"
+    }
+];
+
+// Get the table body element
+const tableBody = document.querySelector("#projects-table tbody");
+
+// Loop through the projects array and create rows dynamically
+projects.forEach(project => {
+    const row = document.createElement("tr");
+
+    // Create a cell for each property in the project object
+    const nameCell = document.createElement("td");
+    nameCell.innerHTML = `<a href="${project.name}/index.html">${project.name}</a>`;
+
+    const dateCell = document.createElement("td");
+    dateCell.textContent = project.date;
+
+    const languagesCell = document.createElement("td");
+    languagesCell.textContent = project.languages;
+
+    // Append the cells to the row
+    row.appendChild(nameCell);
+    row.appendChild(dateCell);
+    row.appendChild(languagesCell);
+
+    // Append the row to the table body
+    tableBody.appendChild(row);
+});
+
+
+    </script>
+</body>
+</html>

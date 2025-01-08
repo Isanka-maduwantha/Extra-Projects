@@ -1,0 +1,14 @@
+{
+  "name": "menu-drop-fdsddsfvdfjghdfjown",
+  "version": "1.0.0",
+  "description": "simple dropdown list when button hover ,one function to repeat all ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "imdroot",
+  "license": "ISC",
+  "dependencies": {
+    "menu-drop-fdsddsfvdfjghdfjown": "^1.0.0"
+  }
+}
