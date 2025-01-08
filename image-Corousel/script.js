@@ -8,9 +8,9 @@ console.log(slides)
 
 
 
-
+let offsetWidth = imageCont.offsetWidth
 let width = 0;
-let increase = 700;
+let increase = offsetWidth;
 let max = increase * (slides.length-1);
 let intervalTime = 2000;
 
